@@ -5,6 +5,13 @@
     box-sizing: border-box;
     font-family: 'Raleway' , sans-serif;
 }
+@media (max-width: 768px) {
+    /* Styles pour les écrans plus petits */
+    .container {
+        width: 100%;
+    }
+}
+
 a {
     text-decoration: 0;
 }
