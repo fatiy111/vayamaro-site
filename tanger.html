@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrir Marrakech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway' , sans-serif;
+}
+    header {
+    background-color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding: 0 5%;
+ }
+ header .logo a {
+    font-size: 25px;
+    color: blue;
+    text-decoration: 0;
+    
+}
+header .logo a span {
+    color: rgb(94, 94, 94) ;
+}
+ .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu li {
+    margin: 0 15px;
+    list-style-type: none;
+    
+}
+.menu li a {
+    color: blue;
+    font-size: 14px;
+}
+body {
+    background-color: beige;
+}
+#Home {
+    background:  linear-gradient(rgba(0,0,0,0.1),#333), url("Saved pictures/OIP\ \(1\).jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}   
+#Home h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    -webkit-text-stroke: #fff 0.02px;
+    color: transparent;
+    text-align: center;
+}
+#Home ul {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+#Home h2{
+    color: rgb(221, 104, 68);
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: justify;
+}
+/*  Animation du menu au survol */
+.menu li a {
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/*  Animation d'apparition du header */
+header {
+    animation: slideDown 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Effet d'apparition du texte */
+#Home h1, #Home h2, #Home ul {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Effet de hover sur les liens et boutons */
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+
+</style>
+<body>
+    <header>
+        <header>
+            <div class="logo">
+                <a href="index.html"><span>Voya</span>Maro</a>
+            </div>
+            <ul class="menu" type="square">
+              <li><a href="index.html">Acceuil</a></li>
+              <li><a href="site.html #a-propos">A propos</a></li>
+              <li><a href="Destinations.html">Destinations</a></li>
+              <li><a href="offres.html">Offres</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="Destinations.html" class="back-btn">Retour</a></li>
+            </ul>
+           </header>
+        <a href="Destinations.html" class="back-btn">Retour</a>
+    </header>
+    
+    <section id="Home">
+        <h1>
+            Tanger, la ville du détroit, est un carrefour entre l'Europe et l'Afrique, <br>
+             offrant une histoire riche et des paysages époustouflants.
+
+        </h1>
+        <h2>Activités à faire :</h2>
+        <ul> 
+            <li> la grotte d'Hercule</li>
+            <li> Explorer la Kasbah de Tanger</li>
+            <li> Se promener sur la Corniche</li>
+            <li> Découvrir les souks et marchés</li>
+        </ul>
+           
+    </section>
+</body>
+</html>

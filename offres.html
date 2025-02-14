@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres Spéciales - VoyaMaro</title>
+    <link rel="stylesheet" href="offres.css">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    background-color: grey;
+    color: #333;
+    padding-top: 80px;
+}
+header {
+    background-color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding: 0 5%;
+ }
+ header .logo a {
+    font-size: 25px;
+    color: blue;
+    text-decoration: 0;
+}
+header .logo a span {
+    color: rgb(94, 94, 94) ;
+}
+ .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu li {
+    margin: 0 15px;
+    list-style-type: none;
+    color: blue;
+}
+#offres {
+    padding: 50px 10%;
+    text-align: center;
+}
+.title {
+    font-size: 32px;
+    color: beige;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.offer {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.offer:hover {
+    transform: scale(1.05);
+}
+.offer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.offer-details {
+    padding: 20px;
+}
+.offer-details h3 {
+    font-size: 24px;
+    color: #005F73;
+    margin-bottom: 10px;
+}
+.offer-details p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.offer-details .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #D32F2F;
+}
+.offer-details .price span {
+    font-size: 22px;
+    color: #388E3C;
+}
+.button {
+    background-color: #005F73;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #00494d;
+}
+footer {
+    background-color: beige;
+    color: #00494d;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.offer:hover {
+    animation: shake 0.5s ease;
+}
+/*  Animation du menu au survol */
+.menu li a {
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+/*  Animation d'apparition du header */
+header {
+    animation: slideDown 0.8s ease-in-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*  Effet d'apparition du texte */
+#Home h1, #Home h2, #Home ul {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*  Effet de hover sur les liens et boutons */
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.back-btn:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+</style>
+<body>
+    <header>
+   <div class="logo">
+       <a href=""><span>Voya</span>Maro</a>
+   </div>
+   <nav>
+   <ul class="menu" >
+     <li><a href="index.html">Accueil</a></li>
+     <li><a href="site.html#a-propos">A propos</a></li>
+     <li><a href="Destinations.html">Destinations</a></li>
+     <li><a href="contact.html">Contact</a></li>
+     <li><a href="reservation.html">Clique ici</a></li>
+   </ul>
+ </nav>
+   <a href="reservation.html" class="button-reservation">Commencez l'aventure!</a>
+ </header>
+    <section id="offres">
+        <h1 class="title">Nos Offres Spéciales</h1>
+        <div class="offer-container">
+            <!-- Offre 1 -->
+            <div class="offer">
+                <img src="Saved pictures/hoceima.jpg" alt="Hoceima">
+                <div class="offer-details">
+                    <h3>Offre Hoceima</h3>
+                    <p>Profitez de la beauté d'Hoceima avec une réduction exclusive sur nos forfaits. Un séjour inoubliable vous attend!</p>
+                    <p class="price">À partir de <span>999 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 2 -->
+            <div class="offer">
+                <img src="Saved pictures/merzouga.jpg" alt="Merzouga">
+                <div class="offer-details">
+                    <h3>Offre Merzouga</h3>
+                    <p>Découvrez le désert de Merzouga avec un forfait tout compris. Profitez de l'aventure à prix réduit!</p>
+                    <p class="price">À partir de <span>1200 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 3 -->
+            <div class="offer">
+                <img src="Saved pictures/saouira.jpg" alt="">
+                <div class="offer-details">
+                    <h3>Offre Essaouira</h3>
+                    <p>Évasion sur la côte atlantique à Essaouira. Profitez de nos offres spéciales pour un séjour relaxant!</p>
+                    <p class="price">À partir de <span>800 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 4 -->
+            <div class="offer">
+                <img src="Saved pictures/rab.jpg" alt="Rabat">
+                <div class="offer-details">
+                    <h3>Offre Rabat</h3>
+                    <p>Visitez la capitale avec ses sites historiques et ses plages tranquilles. Découvrez Rabat à un tarif spécial!</p>
+                    <p class="price">À partir de <span>950 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 5 -->
+            <div class="offer">
+                <img src="Saved pictures/aga.jpg" alt="Agadir">
+                <div class="offer-details">
+                    <h3>Offre Agadir</h3>
+                    <p>Explorez Agadir, ses plages et ses montagnes, tout en profitant d'offres spéciales sur nos forfaits! Idéal pour les amoureux de la nature.</p>
+                    <p class="price">À partir de <span>1050 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 6 -->
+            <div class="offer">
+                <img src="Saved pictures/tet.jpg" alt="Tétouan">
+                <div class="offer-details">
+                    <h3>Offre Tétouan</h3>
+                    <p>Découvrez Tétouan, son architecture unique et ses paysages époustouflants. Profitez d'offres exclusives pour cette destination paisible!</p>
+                    <p class="price">À partir de <span>950 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 7 -->
+            <div class="offer">
+                <img src="Saved pictures/Tangier - Our Ultimate Itinerary - Morocco _ Trip Planning Made Easier For You.jpeg" alt="Tangier">
+                <div class="offer-details">
+                    <h3>Offre Tanger</h3>
+                    <p>Visitez Tanger et explorez son histoire et ses paysages fascinants, avec une offre spéciale pour nos clients!</p>
+                    <p class="price">À partir de <span>1100 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 8 -->
+            <div class="offer">
+                <img src="Saved pictures/Marrakech  lock screen background wallpaper collage 🕌 🇲🇦.jpeg" alt="Marrakech">
+                <div class="offer-details">
+                    <h3>Offre Marrakech</h3>
+                    <p>Venez découvrir Marrakech, la ville rouge, et profitez de tarifs réduits pour une expérience inoubliable!</p>
+                    <p class="price">À partir de <span>1250 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+            <!-- Offre 9 -->
+            <div class="offer">
+                <img src="Saved pictures/Chefchaouen lock screen background wallpaper collage 🇲🇦❤.jpeg" alt="Chefchaouen">
+                <div class="offer-details">
+                    <h3>Offre Chefchaouen</h3>
+                    <p>Visitez la ville bleue et explorez ses ruelles pittoresques. Une offre spéciale pour un séjour tranquille et mémorable!</p>
+                    <p class="price">À partir de <span>1150 MAD</span></p>
+                    <a href="reservation.html" class="button">Réserver maintenant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 VoyaMaro - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

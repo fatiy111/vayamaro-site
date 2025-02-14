@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway' , sans-serif;
+}
+a {
+    text-decoration: 0;
+}
+html {
+  font-size: 62.5%;  
+  scroll-behavior: smooth;
+  scroll-padding-top: 9px;
+ 
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+body {
+    background-color: beige;
+}
+
+section {
+    margin-top: 50px;
+}
+
+header {
+   background-color: beige;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 58px;
+   padding: 0 5%;
+}
+header .logo a {
+    font-size: 25px;
+    color: blue;
+    text-decoration: 0;
+    
+}
+header .logo a span {
+    color: rgb(94, 94, 94) ;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu li {
+    margin: 0 15px;
+    list-style-type: none;
+}
+.menu li a {
+    color: blue;
+    font-size: 14px;
+}
+.button-reservation {
+    color: blue;
+    font-size: 14px;
+    border: 2px solid blue;
+    padding: 5px 20px;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+.button-reservation:hover {
+    background-color: blue;
+    color: white;
+}
+ 
+
+#Home {
+    background:  linear-gradient(rgba(0,0,0,0.1),#333), url("Saved pictures/OIP\ \(1\).jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}   
+#Home h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    -webkit-text-stroke: #fff 2px;
+    color: transparent;
+}
+#Home h4 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+#Home p {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.Home-btn {
+    margin-bottom: 20px;
+}
+.find_trip {
+    background-color: beige;
+    padding: 20px;
+    width: 70%;
+    position: absolute;
+    bottom: -50px;
+}
+.find_trip form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+#voir {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    text-transform: uppercase;
+    color: blue;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#voir:hover {
+    box-shadow: 0 0 10px blue;
+}
+.find_trip form label {
+    color: rgb(94, 94, 94);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.find_trip form input {
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 1px solid blue;
+    outline: 0;
+    width: 100%;
+    font-size: 13px;
+    color: black;
+}
+
+/* Section À propos */
+.titre {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: blue;
+    font-size: 22px;
+    margin: 80px 0;
+    position: relative;
+    margin-left: 65px;
+    display: inline-block;
+}
+
+.titre::after {
+    content: "";
+    position: absolute;
+    left: -8px;
+    bottom: -5px;
+    width: 50px;
+    height: 4px;
+    background-color: rgb(94, 94, 94);
+}
+
+/* Conteneur principal */
+.vd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 5%;
+    background-color: beige;
+    border-radius: 10px;
+}
+
+/* Partie gauche (Vidéo) */
+.vd .left {
+    width: 45%;
+    position: relative;
+}
+
+.vd .left video {
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.vd .left video:hover {
+    transform: scale(1.05);
+}
+
+/* Partie droite (Texte) */
+.vd .right {
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.vd .right h3 {
+    font-size: 26px;
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.vd .right h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 4px;
+    background-color: blue;
+}
+
+.vd .right p {
+    font-size: 16px;
+    color: rgb(94, 94, 94);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton animé */
+.vd .right a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: beige;
+    background-color: blue;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.vd .right a:hover {
+    background-color: darkblue;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vd {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vd .left, .vd .right {
+        width: 100%;
+    }
+
+    .vd .right h3::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*Destinations*/
+.title {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    padding: 0 10px;
+    width: 100px;
+}
+.title {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: blue;
+    position: relative;
+    margin-left: 65px;
+    font-size: 18px;
+}
+.title::after {
+    position: absolute;
+    left: -2.5px;
+    content: "";
+    height: 100%;
+    background-color: rgb(94, 94, 94);
+    width: 5px;;
+}
+/*contact css */
+.contacthome {
+    background-color: white;
+}
+#contact {
+    padding: 0 10px;
+    margin-bottom: 50px;
+    height: 90vh;
+
+}
+#contact form {
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.left-right {
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+   
+}
+.left-right .left , .left-right .right {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+#contact form label {
+    font-size: 40px;
+    padding: 30px 0;
+    font-weight: 1000;
+    color: black;
+    border: #333;
+}
+#contact form input {
+    padding: 8px;
+    outline: 0;
+    border: 1px solid #999;
+}
+textarea {
+    height: 30px;
+    resize: none;
+    outline: 0;
+    width: 50%;
+    padding: 100px;
+}
+#contact form input:hover , textarea:hover{
+    border: 1px solid blue;
+    transition: 0.5s;
+}
+iframe {
+    height: 200px;
+    width: 450%;
+}
+#contact button {
+    width: fit-content;
+    padding: 8px 40px;
+    background-color: #111;
+    border: 1px solid #111;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/*  Animation du menu au survol */
+.menu li a {
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/*  Animation d'apparition du header */
+header {
+    animation: slideDown 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Effet d'apparition du texte */
+#Home h1, #Home h2, #Home ul {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Effet de hover sur les liens et boutons */
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+
+

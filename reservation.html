@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation de Voyage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway' , sans-serif;
+}
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 25px;
+    backdrop-filter: blur(3.5px);
+    border: 0.5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 9px;
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 2px solid grey;
+    box-shadow: 0 0 5px grey;
+}
+
+    header {
+    background-color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    padding: 0 5%;
+ }
+ header .logo a {
+    font-size: 25px;
+    color: blue;
+    text-decoration: 0;
+    
+}
+header .logo a span {
+    color: rgb(94, 94, 94) ;
+}
+ .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu li {
+    margin: 0 15px;
+    list-style-type: none;
+    
+}
+.menu li a {
+    color: blue;
+    font-size: 14px;
+}
+#Home {
+    background:  linear-gradient(rgba(0,0,0,0.1),#333), url("Saved pictures/OIP\ \(1\).jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}   
+/*  Animation du menu au survol */
+.menu li a {
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/*  Animation d'apparition du header */
+header {
+    animation: slideDown 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Effet d'apparition du texte */
+#Home h1, #Home h2, #Home ul {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Effet de hover sur les liens et boutons */
+.back-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid blue;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+</style>
+<body id="Home">
+    <header>
+        <header>
+            <div class="logo">
+                <a href="index.html"><span>Voya</span>Maro</a>
+            </div>
+            <ul class="menu" type="square">
+              <li><a href="index.html">Acceuil</a></li>
+              <li><a href="site.html #a-propos">A propos</a></li>
+              <li><a href="Destinations.html">Destinations</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="Destinations.html" class="back-btn">Retour</a></li>
+            </ul>
+           </header>
+        <a href="Destinations.html" class="back-btn">Retour</a>
+    </header> <br>
+    <div class="container" >
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> Nom Complet</label>
+                <input type="text" name="nom" required>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-calendar-alt"></i> Date de Départ</label>
+                <input type="date" name="date" required>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-map-marker-alt"></i> Destination</label>
+                <select name="destination" required>
+                    <option value="Marrakech">Marrakech</option>
+                    <option value="merzouga">merzouga</option>
+                    <option value="chaouen">Chefchaouen</option>
+                    <option value="Agadir">Agadir</option>
+                    <option value="Tanger">Tanger</option>
+                    <option value="Rabat">Rabat</option>
+                    <option value="hoceima">Hoceima</option>
+                    <option value="tetouan">Tetouan</option>
+                    <option value="essaouira">Essaouira</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-users"></i> Nombre de personnes</label>
+                <input type="number" name="personnes" min="1" required>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-pencil-alt"></i> Demandes Spéciales</label>
+                <textarea name="demandes" rows="1" placeholder="Écrivez vos demandes spéciales ici..."></textarea>
+            </div>
+
+            <button type="submit"><i class="fas fa-check-circle"></i> Réserver Maintenant</button>
+        </form>
+    </div>
+</body>
+</html>

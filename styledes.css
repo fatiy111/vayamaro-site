@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway' , sans-serif;
+}
+header {
+    background-color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding: 0 5%;
+ }
+ header .logo a {
+    font-size: 25px;
+    color: blue;
+    text-decoration: none;
+    
+}
+header .logo a span {
+    color: rgb(94, 94, 94) ;
+}
+ .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu li {
+    margin: 0 15px;
+    list-style-type: none;
+    color: blue;
+}
+body {
+    background-color: grey;
+}
+.title {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    padding: 0 10px;
+    width: 100px;
+}
+.title {
+    text-transform: capitalize;
+    margin: 70px 0;
+    font-weight: bold;
+    color: beige;
+    position: relative;
+    margin-left: 65px;
+    font-size: 25px;
+}
+.title::after {
+    position: absolute;
+    left: -2.5px;
+    content: "";
+    height: 100%;
+    background-color: beige;
+    width: 5px;
+    top: 5%;
+
+}
+
+#Destinations {
+    padding: 0 10%;
+    margin-bottom: 50px;
+}
+#Destinations .content {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+#Destinations .content .box {
+    overflow: hidden;  
+    vertical-align: middle;
+    position: relative;
+    height: 250px;
+    width: 250px;
+}
+#Destinations .content .box img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    left: -2.5px;
+    display: inline-block;
+    
+    }
+.box:hover .content {
+     position: absolute;
+     top: 0; 
+     left: 0; 
+     width: 100%; 
+     height: 100%; 
+     display: flex; 
+     justify-content: center; 
+     align-items: center;
+     text-align: center;
+     text-decoration: double;
+     background-color: white; 
+     transform: translateX(0px); 
+    transition: transform 0.5s all ;
+    }
+.box:hover {
+    box-shadow: 0 0 10px black;
+}
+.box .content {
+    display: flex;
+    flex-direction: column; /* Les éléments seront affichés en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte */
+    gap: 10px; /* Ajoute un espace entre chaque élément */
+    padding: 10px; /* Ajoute un peu d’espace autour du contenu */
+    
+}
+
+.box .content h4 {
+    font-size: 20px;
+    color: blue;
+    margin: 0; /* Supprime les marges par défaut */
+}
+.box .content p {
+    font-size: 12px;
+    color: blue;
+    margin: 0;
+}
+
+.box .content a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid blue;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+
+.box .content a:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+/* ✅ Animation du menu au survol */
+.menu li a {
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: blue;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* ✅ Effet d'apparition des titres */
+.title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Effet zoom progressif sur les box */
+#Destinations .content .box {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+#Destinations .content .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Animation d'apparition des destinations */
+#Destinations .content .box {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Effet de hover sur les boutons */
+.box .content a {
+    transition: all 0.3s ease-in-out;
+}
+
+.box .content a:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ✅ Effet de fade-in sur le header */
+header {
+    animation: fadeHeader 1s ease-in-out;
+}
+
+@keyframes fadeHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
